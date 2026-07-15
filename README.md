@@ -222,4 +222,6 @@ Implementación de técnicas avanzadas de RAG, como Hybrid Search, Re-ranking o 
 👩‍💻 Autora
 
 Priscila Castellón Vásquez
+
 Proyecto desarrollado para el Challenge Alura Agent del programa Oracle Next Education (ONE) en colaboración con Alura Latam.
+
