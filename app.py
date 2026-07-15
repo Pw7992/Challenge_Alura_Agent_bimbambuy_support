@@ -27,23 +27,30 @@ st.set_page_config(
 )
 
 
+import threading
+
 def log_to_oracle(pregunta, respuesta, fuentes, tiempo_ms):
-    """Registra la ejecución en Oracle Autonomous DB vía ORDS (servicio OCI)."""
+    """Registra la ejecución en Oracle Autonomous DB vía ORDS (servicio OCI).
+    Se ejecuta en un hilo aparte para no bloquear la interfaz si Oracle tarda."""
     if not OCI_LOG_ENDPOINT:
         return
-    try:
-        requests.post(
-            OCI_LOG_ENDPOINT,
-            json={
-                "pregunta": pregunta,
-                "respuesta": respuesta,
-                "fuentes": ", ".join(fuentes) if fuentes else "",
-                "tiempo_ms": tiempo_ms,
-            },
-            timeout=15,
-        )
-    except requests.RequestException as e:
-        print(f"[warn] No se pudo registrar en Oracle: {e}")
+
+    def _send():
+        try:
+            requests.post(
+                OCI_LOG_ENDPOINT,
+                json={
+                    "pregunta": pregunta,
+                    "respuesta": respuesta,
+                    "fuentes": ", ".join(fuentes) if fuentes else "",
+                    "tiempo_ms": tiempo_ms,
+                },
+                timeout=30,
+            )
+        except requests.RequestException as e:
+            print(f"[warn] No se pudo registrar en Oracle: {e}")
+
+    threading.Thread(target=_send, daemon=True).start()
 
 
 @st.cache_resource(show_spinner=False)
