@@ -40,7 +40,7 @@ def log_to_oracle(pregunta, respuesta, fuentes, tiempo_ms):
                 "fuentes": ", ".join(fuentes) if fuentes else "",
                 "tiempo_ms": tiempo_ms,
             },
-            timeout=5,
+            timeout=15,
         )
     except requests.RequestException as e:
         print(f"[warn] No se pudo registrar en Oracle: {e}")
