@@ -81,35 +81,9 @@ Desarrollar una interfaz web interactiva con Streamlit.
 Publicar la aplicación utilizando Railway.
 
 🏗 Arquitectura de la solución
-                     Documentos PDF
-                            │
-                            ▼
-               Extracción de texto (PyPDF)
-                            │
-                            ▼
-             División en fragmentos (Chunking)
-                            │
-                            ▼
-             Generación de Embeddings (Cohere)
-                            │
-                            ▼
-             Base Vectorial (ChromaDB)
-                            │
-                            ▼
-              Recuperación Semántica
-               (Retriever - LangChain)
-                            │
-                            ▼
-          Modelo de Lenguaje (Cohere LLM)
-                            │
-                            ▼
-          Aplicación Web (Streamlit)
-                            │
-                            ▼
-            Despliegue en Railway
-                            │
-                            ▼
-                    Usuario Final
+
+<img width="310" height="660" alt="image" src="https://github.com/user-attachments/assets/f9aff738-f21d-4085-8db9-8cc8d40b90d6" />
+
 
 
 🔄Flujo de funcionamiento del agente RAG
@@ -240,38 +214,10 @@ Implementación de técnicas avanzadas de RAG, como Hybrid Search, Re-ranking o 
 
 📂 Estructura del proyecto
 
-BimBam_Buy_Support/
-│
-├── .venv/
-├── docs/
-│   └── README_BimBam_Buy_Support.docx
-│
-├── images/
-│
-├── knowledge_base/
-│   └── Guia_de_Tiempos_y_Costos_de_Envio
-│   └── Manual_de_Garantia_de_Productos
-│   └── Politica_Atencion_Cliente_y_Gestion_Reclamos
-│   └── Política_de_Reembolsos_y_Devoluciones
-│   └── Preguntas_Frecuentes_Metodos_de_Pago
-│   └── Programa_de_Afiliados
 
-│
-├── src/
-│   ├── __pycache__/
-│   ├── ingest.py
-│   └── rag_chain.py
-│
-├── tests/
-│
-├── vector_db/
-│
-├── .env
-├── .env.example
-├── .gitignore
-├── app.py
-├── README.md
-└── requirements.txt
+<img width="445" height="597" alt="image" src="https://github.com/user-attachments/assets/623eacaf-6e5f-4ada-ac7a-308cec245d5c" />
+
+
 
 👩‍💻 Autora
 
