@@ -4,7 +4,7 @@ import streamlit as st
 
 #app.py
 #"""
-Interfaz Streamlit para el agente de soporte BimBam Buy.
+#Interfaz Streamlit para el agente de soporte BimBam Buy.
 #"""
 
 import os
