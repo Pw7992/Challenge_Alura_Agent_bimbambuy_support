@@ -1,12 +1,3 @@
-import streamlit as st
-#st.title("Hello, Streamlit!")
-#st.write("Si ves esto, Streamlit funciona correctamente 🎉")
-
-#app.py
-#"""
-#Interfaz Streamlit para el agente de soporte BimBam Buy.
-#"""
-
 import os
 import time
 import requests
