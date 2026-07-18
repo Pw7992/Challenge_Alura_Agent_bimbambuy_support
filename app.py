@@ -65,17 +65,21 @@ st.markdown("""
         display: flex;
         align-items: center;
         gap: 0.4rem;
-        background: rgba(255,255,255,0.15);
-        border: 1px solid rgba(255,255,255,0.35);
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.9);
         border-radius: 999px;
         padding: 0.3rem 0.8rem;
         text-decoration: none;
         font-size: 0.78rem;
-        color: white;
+        font-weight: 600;
+        color: var(--bb-primary);
         transition: all 0.15s ease;
     }
     .bb-github-link:hover {
-        background: rgba(255,255,255,0.3);
+        background: white;
+        color: var(--bb-secondary);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        transform: translateY(-1px);
     }
 
     /* Burbujas de chat */
